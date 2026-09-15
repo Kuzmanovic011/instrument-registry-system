@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="850" viewBox="0 0 1400 850" role="img" aria-labelledby="title desc">
+  <title id="title">Рад useRef референце</title>
+  <desc id="desc">Дијаграм приказује како useRef креира објекат са својством current, задржава исти објекат након поновног исцртавања и не изазива ново исцртавање при измени current вредности.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#334155"/></marker>
+    <style>
+      .bg{fill:#f8fafc}.title{font:700 36px Arial,sans-serif;fill:#0f172a}.node{fill:#fff;stroke:#475569;stroke-width:3}.accent{fill:#e0f2fe;stroke:#0284c7;stroke-width:3}.success{fill:#dcfce7;stroke:#16a34a;stroke-width:3}.warning{fill:#fef3c7;stroke:#d97706;stroke-width:3}.danger{fill:#fee2e2;stroke:#dc2626;stroke-width:3}.label{font:600 25px Arial,sans-serif;fill:#172554}.small{font:400 21px Arial,sans-serif;fill:#334155}.arrow{fill:none;stroke:#334155;stroke-width:4;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1400" height="850" rx="24"/>
+  <text x="700" y="65" text-anchor="middle" class="title">Начин рада useRef референце</text>
+  <rect x="105" y="135" width="390" height="95" rx="14" class="node"/>
+  <text x="300" y="193" text-anchor="middle" class="label">Приказивање компоненте</text>
+  <path d="M300 230 V300" class="arrow"/>
+  <rect x="105" y="315" width="390" height="125" rx="14" class="accent"/>
+  <text x="300" y="367" text-anchor="middle" class="label">const menuRef = useRef(null)</text>
+  <text x="300" y="405" text-anchor="middle" class="small">креира се ref објекат</text>
+  <path d="M300 440 V510" class="arrow"/>
+  <rect x="105" y="525" width="390" height="120" rx="14" class="success"/>
+  <text x="300" y="575" text-anchor="middle" class="label">menuRef.current</text>
+  <text x="300" y="613" text-anchor="middle" class="small">чува референцу на DOM елемент</text>
+  <path d="M495 585 H695" class="arrow"/>
+  <rect x="725" y="315" width="410" height="125" rx="14" class="warning"/>
+  <text x="930" y="367" text-anchor="middle" class="label">Поновно исцртавање</text>
+  <text x="930" y="405" text-anchor="middle" class="small">задржава се исти ref објекат</text>
+  <path d="M930 440 V510" class="arrow"/>
+  <rect x="725" y="525" width="410" height="120" rx="14" class="accent"/>
+  <text x="930" y="575" text-anchor="middle" class="label">Приступ ref.current</text>
+  <text x="930" y="613" text-anchor="middle" class="small">мерење менија и провера клика ван њега</text>
+  <path d="M1135 585 H1245" class="arrow"/>
+  <rect x="1030" y="690" width="310" height="92" rx="14" class="danger"/>
+  <text x="1185" y="747" text-anchor="middle" class="label">Нема новог исцртавања</text>
+</svg>

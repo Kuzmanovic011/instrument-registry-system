@@ -1,0 +1,15 @@
+{
+  "name": "BICIKLA",
+  "desc": null,
+  "categoryId": 1,
+  "manufacturer": "CAPRIOLO",
+  "manufacturerModel": "123",
+  "serialNumber": "4321",
+  "purchaseYear": 2022,
+  "inventoryNumber": "123",
+  "homeLocationDescription": "TRSTENIK",
+  "status": "SLOBODAN",
+  "calibrationRequired": true,
+  "calibrationResult": "ISPRAVAN",
+  "calibrationStatus": "VAZECA"
+}

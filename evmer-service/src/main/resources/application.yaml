@@ -1,0 +1,64 @@
+spring:
+  web:
+    resources:
+      static-locations: file:../../evmer-webapp/dist/
+  thymeleaf:
+    prefix: file:../../evmer-webapp/dist/
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 25MB
+
+  application:
+    name: evmer
+  datasource:
+    url : jdbc:postgresql://147.91.52.69:5432/app_merni_istrumenti
+    username: app_merni_istrumenti
+    password: welcome1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+#      data-locations: file:././sql_scripts/testData.sql
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: ${MAIL_USERNAME}
+#    password: ${MAIL_PASSWORD}
+#    properties:
+#      mail:
+#        debug: false
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#          connectiontimeout: 20000
+#          timeout: 20000
+#          writetimeout: 20000
+jwt:
+  secret: EvmerJwtSecretKeyKojiImaViseOdTridesetDvaKaraktera2026
+  expiration: 3600000
+  refresh-expiration: 604800000
+app:
+  upload:
+    directory: ../files/equipment_images
+  mailing:
+    enabled: true
+    url: ${MAILING_URL:http://localhost:8000}
+custom-props:
+  allowed-origins:
+    - "http://localhost:5173"
+    - "http://localhost:8080"
+    - "https://staging.impt.rs"
+
+#logging:
+#  level:
+#   root: trace
